@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     :defaults => { :format => 'json' }
 
   get 'metadata/:institution/:layer_id/:metadata_format' => 'opengeometadata#show', 
-    :constraints => { :institution => /[\w\.]+/, :layer_id => /[\w\.:\/]+/ }, 
+    :constraints => { :institution => /[\w\.]+/, :layer_id => /[\w\.:\/-]+/ }, 
     :defaults => { :format => 'xml' }
   
   # The priority is based upon order of creation: first created -> highest priority.
